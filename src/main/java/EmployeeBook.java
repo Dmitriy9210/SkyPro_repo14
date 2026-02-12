@@ -14,24 +14,16 @@ public class EmployeeBook {
 
     public int getMiddleSalary() {
         int i = 0;
+        int sum = 0;
         for (Employee e : employees) {
-            if (e == null) {
+            if (e != null) {
+                sum += e.getSalary();
+                i++;
+            } else {
                 break;
             }
-            i++;
         }
-
-        int[] salaries = new int[i];
-        for (int j = 0; j < i; j++) {
-            salaries[j] = employees[j].getSalary();
-        }
-
-        int allSalaries = 0;
-        for (int s : salaries) {
-            allSalaries = s + allSalaries;
-        }
-
-        int middleSalary = allSalaries / i;
+        int middleSalary = sum / i;
         return middleSalary;
     }
 
