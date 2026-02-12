@@ -12,18 +12,16 @@ public class EmployeeBook {
         }
     }
 
-    public int getMiddleSalary() {
+    public double getMiddleSalary() {
         int i = 0;
         int sum = 0;
         for (Employee e : employees) {
             if (e != null) {
                 sum += e.getSalary();
                 i++;
-            } else {
-                break;
             }
         }
-        int middleSalary = sum / i;
+        double middleSalary = sum / i;
         return middleSalary;
     }
 
