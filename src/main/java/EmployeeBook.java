@@ -21,7 +21,7 @@ public class EmployeeBook {
                 i++;
             }
         }
-        double middleSalary = (double)sum / i;
+        double middleSalary = (double) sum / i;
         return middleSalary;
     }
 
